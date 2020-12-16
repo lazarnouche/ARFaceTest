@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cW0-bu-enb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARFaceTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OK7-ef-kbw">
+                                <rect key="frame" x="20" y="762" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.85045772790908813" green="0.76275020837783813" blue="0.94049715995788574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="0eT-bs-wyk"/>
+                                    <constraint firstAttribute="height" constant="80" id="66P-JM-hGH"/>
+                                </constraints>
+                                <state key="normal" image="carnival_mask"/>
+                                <connections>
+                                    <action selector="maskAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="CvT-Ab-64l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V12-qd-LQo">
+                                <rect key="frame" x="314" y="762" width="80" height="80"/>
+                                <color key="backgroundColor" red="0.85045772790908813" green="0.76275020837783813" blue="0.94049715995788574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="F5r-gc-0Y3"/>
+                                    <constraint firstAttribute="width" constant="80" id="odF-ZJ-iz4"/>
+                                </constraints>
+                                <state key="normal" image="face-recognition"/>
+                                <connections>
+                                    <action selector="faceAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="uxa-ej-xsN"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="chw-Jz-DQw" userLabel="Smile Text">
+                                <rect key="frame" x="0.0" y="140" width="414" height="616"/>
+                                <color key="tintColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7Q-mL-Lnn">
+                                <rect key="frame" x="167" y="762" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="S94-d5-e2b"/>
+                                    <constraint firstAttribute="height" constant="80" id="fao-I5-FNK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="white-circle-icon-9" renderingMode="original"/>
+                                </state>
+                                <connections>
+                                    <action selector="gifAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="exj-2P-BQc"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RgA-c8-OMT" userLabel="Shutter View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="RgA-c8-OMT" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="2Uc-or-wqE"/>
+                            <constraint firstItem="OK7-ef-kbw" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="20" id="AF5-Vv-Vmu"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="CLQ-Re-mog"/>
+                            <constraint firstItem="J7Q-mL-Lnn" firstAttribute="centerY" secondItem="OK7-ef-kbw" secondAttribute="centerY" id="CWd-At-MVC"/>
+                            <constraint firstItem="RgA-c8-OMT" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="ExI-UL-aaY"/>
+                            <constraint firstItem="chw-Jz-DQw" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="Fuj-VT-Bh9"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="LYC-EX-h0H"/>
+                            <constraint firstItem="J7Q-mL-Lnn" firstAttribute="centerX" secondItem="BrB-h1-WRS" secondAttribute="centerX" id="Rnk-n9-tWA"/>
+                            <constraint firstItem="chw-Jz-DQw" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" id="Wev-EP-DhV"/>
+                            <constraint firstAttribute="bottom" secondItem="RgA-c8-OMT" secondAttribute="bottom" id="Zn0-rC-C5N"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="OK7-ef-kbw" secondAttribute="bottom" constant="20" id="dYg-eW-YkG"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="lYe-FO-aBu"/>
+                            <constraint firstItem="chw-Jz-DQw" firstAttribute="centerX" secondItem="J7Q-mL-Lnn" secondAttribute="centerX" id="rpL-Vt-ipM"/>
+                            <constraint firstItem="RgA-c8-OMT" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="t8K-fc-jsg"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="V12-qd-LQo" secondAttribute="trailing" constant="20" id="uqQ-2O-pJR"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="V12-qd-LQo" secondAttribute="bottom" constant="20" id="xLX-qr-Zsu"/>
+                            <constraint firstItem="chw-Jz-DQw" firstAttribute="centerY" secondItem="BrB-h1-WRS" secondAttribute="centerY" id="xuT-V9-1B5"/>
+                            <constraint firstAttribute="bottom" secondItem="BrB-h1-WRS" secondAttribute="bottom" id="y34-k7-02B"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AtD-ed-cWl"/>
+                    <connections>
+                        <outlet property="photoButton" destination="J7Q-mL-Lnn" id="L58-gq-HSs"/>
+                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="shutterView" destination="RgA-c8-OMT" id="icA-ay-csi"/>
+                        <outlet property="smileText" destination="chw-Jz-DQw" id="uVs-sN-iV7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862.3188405797102" y="50.892857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AP6-dP-mCD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cW0-bu-enb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="deC-Yo-Tyb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" systemColor="systemIndigoColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                            <color key="textColor" systemColor="systemIndigoColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BV1-FR-VrT" kind="relationship" relationship="rootViewController" id="w5j-IN-krg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHM-P1-lfQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955.07246376811599" y="50.892857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="carnival_mask" width="512" height="512"/>
+        <image name="face-recognition" width="512" height="512"/>
+        <image name="white-circle-icon-9" width="256" height="256"/>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
